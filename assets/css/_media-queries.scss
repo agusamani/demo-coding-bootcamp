@@ -1,0 +1,48 @@
+@media (max-width: 790px) {
+  .main-container {
+    width: 885px;
+
+    .main-header {
+        width: 885px;
+    }
+
+    .container {
+        width: 510px;
+    }
+
+    .main-header {
+
+      font-size: 22px;
+
+    &__logo {
+        padding-left: 50px;
+    }
+
+    &__nav {
+        margin-right: 50px;
+    }
+
+   }
+  }
+
+   article {
+      display:flex;
+      flex-direction: column-reverse;
+      align-items: flex-start;
+
+      figure {
+          margin-right: 200px;
+        
+        img {
+            width:414px;
+            height: 414px;
+        }
+      }
+
+      &:nth-child(2){
+        flex-direction: column-reverse!important;
+        align-items: flex-start;
+      }
+  }
+
+}

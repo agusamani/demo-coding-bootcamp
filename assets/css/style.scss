@@ -1,0 +1,137 @@
+@import 'normalize';
+@import 'layout';
+
+body{
+  font-family: 'Muli', sans-serif;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+/**
+Header
+*/
+.main-header{
+  background-color: rgba(#000, .7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030;
+  box-sizing: border-box;
+
+  .nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__nav{
+    ul{
+      display: flex;
+      list-style: none;
+      margin-right: 3em;
+      text-transform: uppercase;
+    }
+    a{
+      color: #FFF;
+      font-weight: bold;
+      padding: 1em;
+    }
+  }
+
+  &__logo{
+    color: #FFF;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-left: 3em;
+  }
+}
+
+/**
+Articles
+*/
+.main-articles{
+  .container {
+    padding-left: 85px;
+    padding-right: 85px;
+  }
+  article{
+    display: flex;
+    align-items: center;
+
+    h1{
+      font-size: 3rem;
+    }
+
+    figure{
+      max-width: 50%;
+      & > img{
+        border-radius: 100%;
+        max-height: 400px;
+      }
+    }
+
+    &:nth-child(even){
+      flex-direction: row-reverse;
+    }
+
+    .article-detail__text {
+      padding: 65px;
+    }
+  
+  }
+
+}
+
+/**
+Main Section
+*/
+
+.main-section {
+  background:url("../images/main-background.jpg") no-repeat center;
+  display:flex;
+  background-size: cover;
+  height: 100vh;
+  padding-top: calc(10rem + 55px);
+  padding-bottom: 10rem;
+  position: top;
+  
+  .container {
+    display: block;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    width: 100%;
+  }
+  .button {
+    background-color:#f10cad;
+    border-radius:28px;
+    border:1px solid #f10cad;
+    display:inline-block;
+    font-size:17px;
+    padding:18px 33px;
+    text-transform: uppercase;
+    &:hover {
+      background-color: #660649;
+    }
+  }
+}
+
+/**
+Footer
+*/
+
+footer {
+  color: white;
+  background-color: #000;
+  padding: 48px 0 48px 0;
+  text-align: center;
+  font-size: 12px;
+}
+
+
+@import 'media-queries';
